@@ -31,7 +31,7 @@ const updateContractAddress = async () => {
       currentAddresses[chainId]["ticketsPlug"].push(contract.address);
     }
   } else {
-    currentAddresses[chainId] = { ticketsPlug: contract.address };
+    currentAddresses[chainId] = { ticketsPlug: [contract.address] };
   }
 
   fs.writeFileSync(CaFile, JSON.stringify(currentAddresses))
