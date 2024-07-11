@@ -44,10 +44,7 @@ const data: any[] = [
 ];
 
 const list = async () => {
-  //   await deployments.fixture(["ticketsPlug"]);
-  const TicketsPlug = await ethers.getContractFactory("TicketsPlug");
-  const ticketsPlug = await TicketsPlug.deploy();
-  await ticketsPlug.deployed();
+  const ticketsPlug = await ethers.getContract("TicketsPlug");
 
   console.log("listing..");
   console.log(ticketsPlug.address);
