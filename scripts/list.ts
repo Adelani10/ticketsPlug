@@ -29,22 +29,22 @@ const data: any[] = [
     name: "Enyimba v Rangers Intl ",
     cost: ethers.utils.parseEther("0.02"),
     tickets: 10,
-    date: "July 11",
+    date: "Sep 11",
     time: "2:30PM CST",
-    location: "Moshood Abiola STadium, Abuja",
+    location: "Moshood Abiola Stadium, Abuja",
   },
   {
     name: "Lagos Fashion Fair",
     cost: ethers.utils.parseEther("0.5"),
     tickets: 30,
     date: "Sep 23",
-    time: "11:00AM EST",
+    time: "18:00PM EST",
     location: "Eko Convention Center",
   },
 ];
 
 const list = async () => {
-  const ticketsPlug = await ethers.getContract("TicketsPlug");
+  const ticketsPlug = await ethers.getContractAt("TicketsPlug", "0x107102337e4607fd8b4F54b38662b0De8F1059f9");
 
   console.log("listing..");
   console.log(ticketsPlug.address);

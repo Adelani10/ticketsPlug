@@ -1,14 +1,14 @@
-import "@typechain/hardhat"
-import "@nomiclabs/hardhat-waffle"
+import "@typechain/hardhat";
+import "@nomiclabs/hardhat-waffle";
 // import "@nomiclabs/hardhat-etherscan"
 import "@nomicfoundation/hardhat-verify";
-import "@nomiclabs/hardhat-ethers"
-import "hardhat-gas-reporter"
-import "dotenv/config"
-import "solidity-coverage"
-import "hardhat-deploy"
-import "solidity-coverage"
-import { HardhatUserConfig } from "hardhat/config"
+import "@nomiclabs/hardhat-ethers";
+import "hardhat-gas-reporter";
+import "dotenv/config";
+import "solidity-coverage";
+import "hardhat-deploy";
+import "solidity-coverage";
+import { HardhatUserConfig } from "hardhat/config";
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
@@ -45,6 +45,9 @@ const config: HardhatUserConfig = {
     deployer: {
       default: 0,
     },
+    buyer: {
+      default: 1,
+    },
   },
   gasReporter: {
     enabled: false,
@@ -54,8 +57,8 @@ const config: HardhatUserConfig = {
     coinmarketcap: process.env.COINMARKETCAP_API_KEY,
   },
   etherscan: {
-      apiKey: process.env.ETHERSCAN_API_KEY || "",
-      customChains: [],
+    apiKey: process.env.ETHERSCAN_API_KEY || "",
+    customChains: [],
   },
   mocha: {
     timeout: 500000, // 500 seconds max for running tests
